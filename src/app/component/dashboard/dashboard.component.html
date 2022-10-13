@@ -1,1 +1,58 @@
-<p>dashboard works!</p>
+<h1>Welcome</h1>
+<div>
+  <div>
+    <h5 class="text-center text-warning">Add Student</h5>
+  </div>
+  <div>
+    <input type="text" id="firstName" name="firstname" [(ngModel)]="first_name">
+    <label for="firstname">First name</label>
+  </div>
+  <div>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="last_name">
+    <label for="lastName">Last name</label>
+  </div>
+  <div>
+    <input type="email" id="email" name="email" [(ngModel)]="email">
+    <label for="email">Email address</label>
+  </div>
+  <div>
+    <input type="text" id="mobile" name="mobile" [(ngModel)]="mobile">
+    <label for="mobile">Mobile</label>
+  </div>
+  <button type="button" (click)="addStudent()">Add Student</button>
+
+  <button (click)="logout()">Do you want to logout?</button>
+</div>
+<br>
+<br>
+<div>
+  <div>
+    <h5> Student List</h5>
+    <div>
+      <div>
+        <table >
+          <thead>
+            <tr>
+              <th scope="col">First name</th>
+              <th scope="col">Last name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let studnet of studentsList">
+              <td>{{studnet.first_name}}</td>
+              <td>{{studnet.last_name}}</td>
+              <td>{{studnet.email}}</td>
+              <td>{{studnet.mobile}}</td>
+              <td>
+                <button (click)="deleteStudent(studnet)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>

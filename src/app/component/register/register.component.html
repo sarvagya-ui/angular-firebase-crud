@@ -1,1 +1,18 @@
-<p>register works!</p>
+<h1>Register</h1>
+<form>
+  <div>
+    <label for="email">Email : </label>
+    <input type="text" name="email" id="email" [(ngModel)]="email"/>
+  </div>
+  <div>
+    <label for="email">password : </label>
+    <input type="text" name="password" id="password" [(ngModel)]="password"/>
+  </div>
+  <br>
+  <button (click)="register()">register</button>
+</form>
+<br>
+<div>
+  <a routerLink="/login">Have an account already?</a>
+
+</div>

@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './component/verify-email/verify-email.component';
+import { FileuploadComponent } from './component/fileupload/fileupload.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,
